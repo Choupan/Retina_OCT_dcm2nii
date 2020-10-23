@@ -57,7 +57,7 @@
 				I.hdr.hist.srow_y(2) = dim1;\
 				save_untouch_nii(I,'${OUTPUT_FOLDER}/${i}/${j}/oct_std_horizontal.nii');\
 				exit"
-				# In the resulting Vertical scan the Optical Nerve Head is in the right side od fovea for OD (Left side of nifti file), 
+				# In the resulting Horizontal scan the Optical Nerve Head is in the right side of fovea for OD (Left side of nifti file), 
 				# and in the left side of fovea for OS (Right side of nifti file)
 
 				rm ${OUTPUT_FOLDER}/${i}/${j}/oct.nii
