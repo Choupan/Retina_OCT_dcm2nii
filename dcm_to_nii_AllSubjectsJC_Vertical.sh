@@ -11,7 +11,7 @@
 	DICOM_FOLDER=$3 					# "NAME_OF_THE_DICOM_FOLDER"
 	OUTPUT_FOLDER=$4  					# "PATH_TO_Subject's_OUTPUT_NIFTI_FOLDER"
 	Study_folder=$5 					# "PATH_TO_STUDY_FOLDER"
-	PATH_TO_NIfTI_20140122_FOLDER=$6 	# "Path to Nifti Matlab toolbox"
+	PATH_TO_NIfTI_20140122_FOLDER=$6 			# "Path to Nifti Matlab toolbox"
 
 	for p in ${OUTPUT_FOLDER}/SubjectsID
 
@@ -25,20 +25,20 @@
 			for g in ${INPUT_DIR}/HCLV${i}_OD_OS_DICOM/${j}/Volume_scans/${DICOM_FOLDER}
 
 			do
-				DicomFolder=`echo $g | rev | cut -d '/' -f1 | rev` # `-f14` needs to be adjusted based on the folder subdirectories
+				DicomFolder=`echo $g | rev | cut -d '/' -f1 | rev` 
 				mkdir -p ${OUTPUT_FOLDER}/${i}/${j}
 				
 				dcm2niix -f oct -o ${OUTPUT_FOLDER}/${i}/${j} ${g}/  # Convert Vertical scans dicom file to nifti. The resulting nifti 
-				# orientation is {0  0 1;
-				#				  0 1 0;
-				#		  	 	  1 0 0}
+				# orientation is {0 0 1;
+				#		  0 1 0;
+				#		  1 0 0}
 
 				# Then, use Matlab in the terminal and loads the converted nifti OCT file
 				# The following adjustments to the header of the nifti file changes the placements of pixel dimensions, and
 				# changes the orientation of the nifti file
 				# into RAS {1 0 0;
-				#			0 1 0;
-				#			0 0 1}
+				#	    0 1 0;
+				#	    0 0 1}
 
 				matlab -nodisplay -nojvm -nosplash -r "addpath(genpath('${PATH_TO_NIfTI_20140122_FOLDER}'));\
 				I = load_untouch_nii('${OUTPUT_FOLDER}/${i}/${j}/oct.nii');\
