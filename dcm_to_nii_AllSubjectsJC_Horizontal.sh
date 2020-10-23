@@ -6,21 +6,21 @@
 	# /INPUT_DIR/SubjectsID=`i`/OD_or_OS_Folders=`j`/Volume_scans/Horizontal_DICOM_FOLDER
 
 	
-	INPUT_DIR=${Study_folder}/OCT_Heidelberg_DICOM
+	
 	SubjectsID=$1
 	OD_or_OS_Folders=$2
 	DICOM_FOLDER=$3 					# "NAME_OF_THE_DICOM_FOLDER"
 	OUTPUT_FOLDER=$4  					# "PATH_TO_Subject's_OUTPUT_NIFTI_FOLDER"
-	Study_folder=$5 					# "PATH_TO_STUDY_FOLDER"
-	PATH_TO_NIfTI_20140122_FOLDER=$6			# "Path to Nifti Matlab toolbox"
-	
+	Study_folder=$5 					# "PATH_TO_STUDY_DICOM_FOLDER"
+	PATH_TO_NIfTI_20140122_FOLDER=$6	# "Path to Nifti Matlab toolbox"
+	INPUT_DIR=${Study_folder}
 
-	for p in ${OUTPUT_FOLDER}/SubjectsID
+	for p in ${OUTPUT_FOLDER}/${SubjectsID}
 
 	do
 		i=`echo $p | rev | cut -d '/' -f1 | rev`  # `i` is the subject name 
 
-		for l in ${p}/OD_or_OS_Folders
+		for l in ${p}/${OD_or_OS_Folders}
 		do
 			j=`echo $l | rev | cut -d '/' -f1 | rev` # `j` is the name of the OD and OS folders 
 

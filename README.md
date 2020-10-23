@@ -22,7 +22,7 @@ The folder arrangement for this repository is as follow:
 `/INPUT_DIR/SubjectsID/OD_or_OS_Folders/Volume_scans/Horizontal_or_Vertical_DICOM_FOLDER` 
 
 To run the code for Horizontal scans:
-/PATH_TO:dcm_to_nii_AllSubjectsJC_Horizontal.sh `SubjectsID` `OD_or_OS_Folders` `DICOM_FOLDER_NAME` `Path_to_OUTPUT_FOLDER` `Path_to_Study_folder` `PATH_to_NIfTI_20140122_FOLDER`
+/PATH_TO:dcm_to_nii_AllSubjectsJC_Horizontal.sh `SubjectsID` `OD_or_OS_Folders` `DICOM_FOLDER_NAME` `Path_to_OUTPUT_FOLDER` `Path_to_Study_DICOM_folder` `PATH_to_NIfTI_20140122_FOLDER`
 
 To run the code for Vertical scans:
 /PATH_TO:dcm_to_nii_AllSubjectsJC_Vertical.sh `SubjectsID` `OD_or_OS_Folders` `DICOM_FOLDER_NAME` `Path_to_OUTPUT_FOLDER` `Path_to_Study_folder` `PATH_to_NIfTI_20140122_FOLDER`
