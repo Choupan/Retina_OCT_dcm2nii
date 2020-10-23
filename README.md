@@ -6,6 +6,9 @@ The Dicom OCT data used to develop this code were derived using the Heidelberg s
 Results of Horizontal and Vertical scans after conventional dicom2nifti transformation had image orientation and dimension that did not follow the Neurological (RAS) format. 
 The high resolution volume OCT data for this repository were acquired in 30 by 20 field of view. Horizontal scans cover the optic nerve head and the fovea, and the vertical scans contain the fovea only.
 
+In the resulting Vertical scan the Optical Nerve Head is in Inferior section for OD and in Superior section for OS.
+In the resulting Horizontal scan the Optical Nerve Head is in the right side of fovea for OD (Left side of nifti file), and in the left side of fovea for OS (Right side of nifti file)
+
 ## Installation 
 Rhis repo requires dcm2niix, QIT and MATLAB - to install them:
 - go to [dcm2nii](https://www.nitrc.org/plugins/mwiki/index.php/dcm2nii:MainPage)
