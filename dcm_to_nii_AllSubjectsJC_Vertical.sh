@@ -11,8 +11,8 @@
 	DICOM_FOLDER=$3 					# "NAME_OF_THE_DICOM_FOLDER"
 	OUTPUT_FOLDER=$4  					# "PATH_TO_Subject's_OUTPUT_NIFTI_FOLDER"
 	Study_folder=$5 					# "PATH_TO_STUDY_DICOM_FOLDER"
-	PATH_TO_NIfTI_20140122_FOLDER=$6 	# "Path to Nifti Matlab toolbox"
-    INPUT_DIR=${Study_folder}
+	PATH_TO_NIfTI_20140122_FOLDER=$6 			# "Path to Nifti Matlab toolbox"
+        INPUT_DIR=${Study_folder}
 
 	for p in ${OUTPUT_FOLDER}/${SubjectsID}
 
